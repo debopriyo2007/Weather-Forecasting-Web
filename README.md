@@ -9,4 +9,4 @@ A modern weather app using OpenWeather API.
 - Responsive UI
 
 ## Live Demo
-https://USERNAME.github.io/weather-app/
+(https://ubiquitous-chebakia-fc0851.netlify.app/)
