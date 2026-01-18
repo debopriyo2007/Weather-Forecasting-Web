@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* MAIN BACKGROUND LAYER */
+.weather-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Base animated gradient (always stays) */
+  background:
+    radial-gradient(circle at top, rgba(0, 150, 255, 0.35), transparent 40%),
+    radial-gradient(circle at bottom, rgba(255, 200, 0, 0.25), transparent 45%),
+    linear-gradient(135deg, #74ebd5, #9face6);
+
+  transition: background 0.6s ease;
+}
+
+/* WEATHER STATES (overlay only) */
+.clear-day {
+  background:
+    linear-gradient(180deg, rgba(135, 206, 235, 0.5), rgba(255,255,255,0.4)),
+    linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+.clear-night {
+  background:
+    linear-gradient(180deg, rgba(15, 32, 39, 0.7), rgba(44, 83, 100, 0.7)),
+    linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.clouds-day {
+  background:
+    linear-gradient(180deg, rgba(189,195,199,0.7), rgba(236,240,241,0.7)),
+    linear-gradient(135deg, #bdc3c7, #ecf0f1);
+}
+
+.clouds-night {
+  background:
+    linear-gradient(180deg, rgba(35,37,38,0.8), rgba(65,67,69,0.8)),
+    linear-gradient(135deg, #232526, #414345);
+}
+
+.rain-day {
+  background:
+    linear-gradient(180deg, rgba(75,121,161,0.7), rgba(40,62,81,0.7)),
+    linear-gradient(135deg, #4b79a1, #283e51);
+}
+
+.rain-night {
+  background:
+    linear-gradient(180deg, rgba(20,30,48,0.85), rgba(36,59,85,0.85)),
+    linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* APP CARD */
+.app {
+  width: 340px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+}
+
+.search-box button {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  background: #6c5ce7;
+  color: white;
+  cursor: pointer;
+}
+
+/* WEATHER */
+.main-weather img {
+  width: 90px;
+}
+
+.temp {
+  font-size: 42px;
+  margin: 5px 0;
+}
+
+/* GRID */
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.grid-item {
+  background: rgba(255,255,255,0.45);
+  padding: 12px;
+  border-radius: 14px;
+}
+
+/* HOURLY */
+.hourly-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.hour-card {
+  min-width: 70px;
+  background: rgba(255,255,255,0.45);
+  padding: 10px;
+  border-radius: 16px;
+  text-align: center;
+}
+.weather-bg {
+  min-height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px; /* prevents edge sticking on small screens */
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="weather-bg clear-day">
+    
+    <div class="app">
+
+      <button class="theme-btn">🌙</button>
+
+      <h1 class="city">Weather App</h1>
+
+      <div class="search-box">
+        <input type="text" placeholder="Enter city">
+        <button>Search</button>
+      </div>
+
+      <div class="main-weather">
+        <img src="" alt="icon">
+        <h1 class="temp">--°C</h1>
+        <p class="desc">---</p>
+      </div>
+
+      <div class="weather-grid">
+        <div class="grid-item">
+          <span>Humidity</span>
+          <p class="humidity">--%</p>
+        </div>
+
+        <div class="grid-item">
+          <span>Wind</span>
+          <p class="wind">-- m/s</p>
+        </div>
+
+        <div class="grid-item">
+          <span>Pressure</span>
+          <p class="pressure">----</p>
+        </div>
+      </div>
+
+      <h3 class="section-title">Hourly Forecast (24 hrs)</h3>
+      <div class="hourly-container"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
